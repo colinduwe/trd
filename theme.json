@@ -71,12 +71,12 @@
 					"slug": "tertiary"
 				},
 				{
-					"color": "#FCFFF5",
+					"color": "#000000",
 					"name": "Background",
 					"slug": "background"
 				},
 				{
-					"color": "#181818",
+					"color": "#ffffff",
 					"name": "Foreground",
 					"slug": "foreground"
 				},
