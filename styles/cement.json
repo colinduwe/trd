@@ -1,0 +1,63 @@
+{
+	"title": "Cement",
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"gradient": "linear-gradient(180deg, rgba(242,228,50,1) 0%, rgba(241,173,48,1) 25%, rgba(241,96,38,1) 40%, rgba(214,49,47,1) 70%, rgba(117,30,44,1) 100%)",
+					"name": "Sunset",
+					"slug": "sunset"
+				},
+				{
+					"gradient": "linear-gradient(180deg, rgba(242,228,50,0.5) 0%, rgba(241,173,48,0.5) 25%, rgba(241,96,38,0.5) 40%, rgba(214,49,47,0.5) 70%, rgba(117,30,44,0.5) 100%)",
+					"name": "Sunset Transparent",
+					"slug": "sunset-transparent"
+				},
+				{
+					"gradient": "linear-gradient(60deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 10)",
+					"name": "Orange Fade",
+					"slug": "orange-fade"
+				}
+			],
+			"palette": [
+				{
+					"color": "#fcb900",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#f16026",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#ff0000",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				},
+				{
+					"color": "#858A7E",
+					"name": "Background",
+					"slug": "background"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Foreground",
+					"slug": "foreground"
+				},
+				{
+					"color": "rgba(152, 152, 156, 0.8)",
+					"name": "Accent",
+					"slug": "accent"
+				},
+				{
+					"color": "#181818",
+					"name": "Charcoal",
+					"slug": "charcoal"
+				}
+			]
+		}
+	},
+	"version": 2,
+	"$schema": "https://schemas.wp.org/wp/6.3/theme.json"
+}

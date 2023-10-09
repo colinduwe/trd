@@ -1,16 +1,129 @@
 /*
 Theme Name: TRD
+Text Domain: trd
+Version: 0.0.1
+Description: TRD: Theme retro design is a lightweight theme to showcase the block editor, full-site editing and block patterns. Hat tip and big thanks to Anders Norén (https://andersnoren.se) and his many themes such as Poe from which I learned a lot and borrowed more than a little for this.
+Tags: blog, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, full-site-editing
 Theme URI: https://github.com/colinduwe/trd
 Author: Colin Duwe
 Author URI: https://www.colinduwe.com/
-Description: TRD: Theme retro design is a lightweight theme to showcase the block editor, full-site editing and block patterns
-Requires at least: 5.8
-Tested up to: 6.2
-Requires PHP: 5.7
-Version: 0.0.1
+Tested up to: 6.3
+Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Template: 
-Text Domain: trd
-Tags: block-patterns, full-site-editing, style-variations, template-editing
 */
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Input styles */
+
+input, textarea, select, button {
+	background-color: inherit;
+	border-radius: 0;
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	margin: 0;
+}
+
+input, textarea, select {
+	background-color: var( --wp--preset--color--background );
+	border: .1rem solid var( --wp--preset--color--accent );
+	box-sizing: border-box;
+	color: var( --wp--preset--color--foreground );
+	max-width: 100%;
+	padding: .5em;
+}
+
+label {
+	font-size: var( --wp--preset--font-size--small );
+	font-weight: 500;
+}
+
+/* Fix image float clearing */
+.entry-content.wp-block-post-content + div{
+	clear: both;
+}
+/* Fix Alignments */
+@media only screen and (min-width : 768px) {
+	figure.wp-block-image.alignleft {
+		margin-left: calc( ( 100% - var(--wp--style--global--content-size)) / 2 );
+	}
+	
+	figure.wp-block-image.alignright {
+		margin-right: calc( ( 100% - var(--wp--style--global--content-size)) / 2 );
+	}
+	.entry-content.has-global-padding > .alignleft {
+		margin-left: calc( ( 100% - var(--wp--style--global--content-size)) / 2 );
+	}
+	.entry-content.has-global-padding > .alignright {
+		margin-right: calc( ( 100% - var(--wp--style--global--content-size)) / 2 );
+	}
+}
+.wp-block-navigation .wp-block .wp-block .block-editor-button-block-appender{
+	color: var(--wp--preset--color--foreground);
+}
+
+
+/* ------------------------------------------- */
+/* Blocks
+/* ------------------------------------------- */
+
+/* Block: Button ----------------------------- */
+
+/* STYLE: SQUARED */
+.is-style-squared > .wp-block-button__link,
+.wp-block-button__link.is-style-squared {
+	border-radius: 0;
+}
+
+/* STYLE: ARROW */
+
+.is-style-trd-arrow > .wp-block-button__link,
+.wp-block-button__link.is-style-trd-arrow {
+	background-color: transparent;
+	color: var( --wp--preset--color--primary );
+	font-weight: inherit;
+	padding: 0;
+}
+
+.is-style-trd-arrow > .wp-block-button__link:after,
+.wp-block-button__link.is-style-trd-arrow:after {
+	content: "\2192";
+	display: inline-block;
+	font-weight: 300;
+	margin-left: 0.5em;
+	text-decoration: none;
+}
+
+.is-style-trd-arrow > .wp-block-button__link:hover, .wp-block-button__link.is-style-trd-arrow:hover,
+.is-style-trd-arrow > .wp-block-button__link:focus, .wp-block-button__link.is-style-trd-arrow:focus {
+	text-decoration: underline;
+}
+
+/* Block: Post Comments Form ----------------- */
+
+ol.wp-block-comment-template {
+	margin: 0;
+}
+
+.wp-block-post-comments-form input:not([type=submit]), 
+.wp-block-post-comments-form textarea {
+	border-color: var( --wp--preset--color--accent );
+}
+
+.required-field-message,
+.comment-notes {
+	display: none;
+}
+
+.logged-in-as {
+	color: var( --wp--preset--color--secondary );
+}
+
+.comment-reply-title {
+	margin: 0;
+}

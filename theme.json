@@ -1,64 +1,110 @@
 {
+	"customTemplates": [
+		{
+			"name": "template-blank",
+			"title": "Blank Canvas"
+		},
+		{
+			"name": "template-no-title",
+			"postTypes": [
+				"page"
+			],
+			"title": "No Title"
+		},
+		{
+			"name": "template-wide-post-header",
+			"postTypes": [
+				"post"
+			],
+			"title": "Wide Post Header"
+		},
+		{
+			"name": "template-wide-page-header",
+			"postTypes": [
+				"page"
+			],
+			"title": "Wide Page Header"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"defaultPalette": false,
+			"background": true,
+			"custom": true,
+			"customDuotone": true,
+			"customGradient": true,
+			"defaultDuotone": true,
 			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"gradients": [
+				{
+					"gradient": "linear-gradient(180deg, rgba(242,228,50,1) 0%, rgba(241,173,48,1) 25%, rgba(241,96,38,1) 40%, rgba(214,49,47,1) 70%, rgba(117,30,44,1) 100%)",
+					"name": "Sunset",
+					"slug": "sunset"
+				},
+				{
+					"gradient": "linear-gradient(180deg, rgba(242,228,50,0.5) 0%, rgba(241,173,48,0.5) 25%, rgba(241,96,38,0.5) 40%, rgba(214,49,47,0.5) 70%, rgba(117,30,44,0.5) 100%)",
+					"name": "Sunset Transparent",
+					"slug": "sunset-transparent"
+				},
+				{
+					"gradient": "linear-gradient(60deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 10)",
+					"name": "Orange Fade",
+					"slug": "orange-fade"
+				}
+			],
 			"palette": [
 				{
 					"color": "#f16026",
 					"name": "Primary",
-					"slug": "custom-primary"
+					"slug": "primary"
 				},
 				{
 					"color": "#fcb900",
 					"name": "Secondary",
-					"slug": "custom-secondary"
+					"slug": "secondary"
 				},
 				{
 					"color": "#ff0000",
 					"name": "Tertiary",
-					"slug": "custom-tertiary"
+					"slug": "tertiary"
 				},
 				{
-					"color": "#000",
+					"color": "#FCFFF5",
 					"name": "Background",
-					"slug": "custom-background"
+					"slug": "background"
 				},
 				{
-					"color": "#ffffff",
+					"color": "#181818",
 					"name": "Foreground",
-					"slug": "custom-foreground"
+					"slug": "foreground"
 				},
 				{
 					"color": "#98989c",
-					"name": "Gray",
-					"slug": "custom-gray"
+					"name": "Accent",
+					"slug": "accent"
 				}
 			],
-			"gradients": [
-				{
-				  "gradient": "linear-gradient(180deg, rgba(242,228,50,1) 0%, rgba(241,173,48,1) 25%, rgba(241,96,38,1) 40%, rgba(214,49,47,1) 70%, rgba(117,30,44,1) 100%)",
-				  "slug": "sunset",
-				  "name": "Sunset"
-				},
-				{
-				  "gradient": "linear-gradient(180deg, rgba(242,228,50,0.5) 0%, rgba(241,173,48,0.5) 25%, rgba(241,96,38,0.5) 40%, rgba(214,49,47,0.5) 70%, rgba(117,30,44,0.5) 100%)",
-				  "slug": "sunset-transparent",
-				  "name": "Sunset Transparent"
-				},
-				{
-					"gradient": "linear-gradient(60deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 10)",
-					"slug": "orange-fade",
-					"name": "Orange Fade"
-				}
-			  ]
+			"text": true
 		},
 		"layout": {
-			"contentSize": "620px",
-			"wideSize": "1000px"
+			"contentSize": "960px",
+			"wideSize": "1200px"
+		},
+		"shadow": {
+			"defaultPresets": true,
+			"presets": []
 		},
 		"spacing": {
+			"customSpacingSize": true,
+			"spacingScale": {
+				"increment": 1.5,
+				"mediumStep": 1.5,
+				"operator": "*",
+				"steps": 7,
+				"unit": "rem"
+			},
 			"units": [
 				"%",
 				"px",
@@ -69,6 +115,9 @@
 			]
 		},
 		"typography": {
+			"customFontSize": true,
+			"dropCap": true,
+			"fluid": true,
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
@@ -125,28 +174,73 @@
 					"fontFamily": "Roboto",
 					"slug": "roboto"
 				}
-			]
-		}
+			],
+			"fontSizes": [],
+			"fontStyle": true,
+			"fontWeight": true,
+			"letterSpacing": true,
+			"textDecoration": true,
+			"textTransform": true
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"color": {
-			"background": "var:preset|color|custom-background",
-			"text": "var:preset|color|custom-foreground"
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
 		},
 		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "4rem"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "3.5rem"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "3rem"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "2.5rem"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "2rem"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "1rem"
+				}
+			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|bc-alphapipe-l"
+					"fontFamily": "var(--wp--preset--font-family--bc-alphapipe-l)"
 				}
 			},
 			"link": {
 				"color": {
-					"text": "var:preset|color|custom-primary"
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
 		},
+		"spacing": {
+			"padding": {
+				"bottom": "0px",
+				"left": "var(--wp--style--block-gap)",
+				"right": "var(--wp--style--block-gap)",
+				"top": "0px"
+			}
+		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|roboto"
+			"fontFamily": "var(--wp--preset--font-family--roboto)"
 		}
 	},
 	"templateParts": [
@@ -160,5 +254,5 @@
 		}
 	],
 	"version": 2,
-	"$schema": "https://schemas.wp.org/wp/6.2/theme.json"
+	"$schema": "https://schemas.wp.org/wp/6.3/theme.json"
 }
