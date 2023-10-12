@@ -171,18 +171,38 @@
 							]
 						}
 					],
-					"fontFamily": "Roboto",
+					"fontFamily": "Roboto,-apple-system,BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+					"name": "Roboto",
 					"slug": "roboto"
 				}
 			],
-			"fontSizes": [],
 			"fontStyle": true,
 			"fontWeight": true,
 			"letterSpacing": true,
 			"textDecoration": true,
 			"textTransform": true
 		},
-		"useRootPaddingAwareAlignments": true
+		"useRootPaddingAwareAlignments": true,
+		"custom": {
+			"transition": {
+				"hover": "0.2s ease-in-out"
+			},
+			"color": {
+				"primary-rgb": "241, 96, 38",
+				"primary-darker": "#c7420d",
+				"primary-lighter": "#f4885c",
+				"secondary-rgb": "252, 185, 0",
+				"secondary-contrast": "#010203",
+				"secondary-darker": "#b58b14",
+				"secondary-lighter": "#ecc250",
+				"foreground-rgb": "255, 255, 255",
+				"danger": "#ff4500",
+				"danger-rgb": "255, 69, 0",
+				"danger-contrast": "#010203",
+				"success": "#66b032",
+				"success-rgb": "102, 176, 50"
+			}
+		}
 	},
 	"styles": {
 		"color": {
@@ -228,6 +248,17 @@
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--primary)"
+				},
+				"typography": {
+					"textDecoration": "none"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--secondary)"
+					},
+					"typography": {
+						"textDecoration": "none"
+					}
 				}
 			}
 		},
