@@ -84,3 +84,34 @@ function trd_register_block_styles() {
 	) );
 }
 add_action( 'init', 'trd_register_block_styles' );
+
+/*	-----------------------------------------------------------------------------------------------
+	GRAVITY FORMS
+	Provide theme styles as defaults for Gravity Forms form themes.
+	Properties:
+	'theme'
+	'inputSize'
+	'inputBorderRadius'
+	'inputBorderColor'
+	'inputBackgroundColor'
+	'inputColor'
+	'inputPrimaryColor'
+	'labelFontSize'
+	'labelColor'
+	'descriptionFontSize'
+	'descriptionColor'
+	'buttonPrimaryBackgroundColor'
+	'buttonPrimaryColor'
+--------------------------------------------------------------------------------------------------- */
+add_filter( 'gform_default_styles', function( $styles ) {
+	 
+	$theme_json = json_decode( file_get_contents( get_template_directory() . '/theme.json' ), JSON_OBJECT_AS_ARRAY );
+ 
+ 	$styles['labelColor'] = $theme_json['styles']['color']['text'];
+	$styles['descriptionColor'] = $theme_json['styles']['color']['accent'];
+	$styles['buttonPrimaryBackgroundColor'] = $theme_json['styles']['elements']['button']['color']['background'];
+	$styles['buttonPrimaryColor'] = $theme_json['styles']['elements']['button']['color']['text'];
+ 
+	return $styles;
+ 
+} );
