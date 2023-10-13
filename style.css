@@ -251,7 +251,7 @@ body .gform-theme--framework, body .gform-theme--api {
 	--gform-theme-font-style-base: normal;
 
 	/* Miscellaneous */
-	--gform-theme-border-radius: 9999px;
+	--gform-theme-border-radius: 9999px !important;
 	--gform-theme-border-radius-max-sm: 2px;
 	--gform-theme-border-radius-max-md: 3px;
 	--gform-theme-border-radius-max-lg: 8px;
@@ -834,4 +834,8 @@ body .gform-theme--framework, body .gform-theme--api {
 	The contrasting color to be used against the success color.
 	*/
 	--gform-theme-color-success-contrast-rgb: 255, 255, 255;
+	
+	--gform-theme-control-border-color-focus: var(--wp--preset--color--accent);
+	
+	--gform-theme-form-validation-background-color: rgba( 255,255,255,0.75);
 }
